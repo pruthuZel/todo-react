@@ -1,8 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://mdn.github.io/todo-react/"
+
+  // Base path should be root for custom domain deployments
+  base: '/',
+
+  preview: {
+    host: true,            // bind to 0.0.0.0
+    port: 8080,            // server port
+    allowedHosts: [
+      'demo.condense.zeliot.in'
+    ]
+  }
 })
