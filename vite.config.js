@@ -7,8 +7,7 @@ export default defineConfig({
   preview: {
     host: true,
     port: 8080,
-    allowedHosts: [
-      'demo.condense.zeliot.in'
-    ]
+    host: true,
+    allowedHosts: true 
   }
 })
