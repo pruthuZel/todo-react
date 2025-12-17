@@ -21,6 +21,6 @@ USER app
 
 COPY --from=builder /app/dist ./dist
 
-EXPOSE 4173
+EXPOSE 8080
 
-CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "4173"]
+CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "8080"]
